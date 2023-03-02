@@ -1,32 +1,5 @@
-// // Get the modal
-// var modal = document.getElementById("myModal");
-//
-// // Get the button that opens the modal
-// var btn = document.getElementById("product-list");
-//
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-//
-// // When the user clicks the button, open the modal
-// btn.onclick = function() {
-//     modal.style.display = "block";
-//     console.log('helo');
-// }
-//
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-//
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-// Get the modal and close button
-var modal = document.getElementById("product-modal");
-var span = document.getElementsByClassName("close")[0];
+let modal = document.getElementById("product-modal");
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -35,7 +8,7 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
 }
@@ -45,11 +18,11 @@ document.getElementById('product-list2').addEventListener('click', function(even
     // Check if the clicked element is a BuyNow button
     if (event.target.classList.contains('buy-now')) {
         // Get the product ID from the data attribute
-        var productId = event.target.getAttribute('data-product-id');
+        let productId = event.target.getAttribute('data-product-id');
 
         // Set the title and description of the modal based on the product ID
-        var title = document.getElementById('product-modal-title');
-        var description = document.getElementById('product-modal-description');
+        let title = document.getElementById('product-modal-title');
+        let description = document.getElementById('product-modal-description');
         switch (productId) {
             case '1':
                 title.innerText = 'Product 1';
@@ -73,32 +46,60 @@ document.getElementById('product-list2').addEventListener('click', function(even
     }
 });
 // Array of image URLs to cycle through
-const product1Images = [
-    "image/masjid1.jpg",
+const productImages = [
+    ["image/masjid1.jpg",
     "image/masjidil-haram.jpg",
-    "image/masjid4.jpg"
-];
+    "image/masjid4.jpg"],
+    ["image/masjid2.jpg",
+    "image/hagia-sophia.jpg",
+    "image/kaabah.jpg"],
+    ["image/masjid3.jpg",
+    "image/grand-mosque.jpg",
+    "image/masjid4.jpg"],
+    ["image/masjid4.jpg",
+    "image/brown-mosque.jpg",
+    "image/masjid2.jpg"]];
+// const product1Images = [
+//     "image/masjid1.jpg",
+//     "image/masjidil-haram.jpg",
+//     "image/masjid4.jpg"
+// ];
+// const product2Images = [
+//     "image/masjid2.jpg",
+//     "image/hagia-sophia.jpg",
+//     "image/kaabah.jpg"
+// ];
+// const product3Images = [
+//     "image/masjid3.jpg",
+//     "image/grand-mosque.jpg",
+//     "image/masjid4.jpg"
+// ];
+// const product4Images = [
+//     "image/masjid4.jpg",
+//     "image/brown-mosque.jpg",
+//     "image/masjid2.jpg"
+// ];
 
-const product1ImgElement = document.getElementById('product1-img');
+const productImgElement = [
+    document.getElementById("product-img-1"),
+    document.getElementById("product-img-2"),
+    document.getElementById("product-img-3"),
+    document.getElementById("product-img-4")];
 
-let currentProduct1ImageIndex = 0;
-
-// Change the image every 5 seconds
-// setInterval(() => {
-//     currentProduct1ImageIndex = (currentProduct1ImageIndex + 1) % product1Images.length;
-//     console.log(currentProduct1ImageIndex);
-//     console.log(product1Images[currentProduct1ImageIndex]);
-//     product1ImgElement.src = product1Images[currentProduct1ImageIndex];
-// }, 5000);
+let currentProductImageIndex = [0,0,0,0];
 setInterval(function() {
-    currentProduct1ImageIndex++;
-    if (currentProduct1ImageIndex >= product1Images.length) {
-        currentProduct1ImageIndex = 0;
-    }
-    product1ImgElement.style.opacity = 0;
+    for (let i = 0 ; i < productImgElement.length ; i++){
+        currentProductImageIndex[i]++;
+        if (currentProductImageIndex[i] >= productImages[i].length){
+            currentProductImageIndex[i]=0;
+        }
+    productImgElement[i].style.opacity=0;
+
     setTimeout(function() {
-        product1ImgElement.src = product1Images[currentProduct1ImageIndex];
-        product1ImgElement.style.opacity = 1;
+        productImgElement[i].src = productImages[i][currentProductImageIndex[i]];
+        productImgElement[i].style.opacity=1;
+
     }, 500);
+    }
 }, 4000);
 

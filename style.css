@@ -97,7 +97,23 @@ header {
     font-size: 32px;
     margin-bottom: 20px;
 }
-#product1-img{
+/*#product1-img{*/
+/*    transition: opacity 0.5s ease-in-out;*/
+/*}*/
+/*#product2-img{*/
+/*    transition: opacity 0.5s ease-in-out;*/
+/*}*/
+/*#product3-img{*/
+/*    transition: opacity 0.5s ease-in-out;*/
+/*}*/
+/*#product4-img{*/
+/*    transition: opacity 0.5s ease-in-out;*/
+/*}*/
+/*.product image{*/
+/*    opacity: 1;*/
+/*    transition: opacity 0.5s ease-in-out;*/
+/*}*/
+.product-img{
     transition: opacity 0.5s ease-in-out;
 }
 .contact{
