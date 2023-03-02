@@ -1,0 +1,216 @@
+body {
+    /*background-image: url("image/backgroud.jpg");*/
+    background-color: lightgoldenrodyellow;
+    /*filter: brightness(0.8);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: navajowhite;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.company-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.company-name h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+.intro-text {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.intro-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 18px;
+}
+
+
+.product {
+    /*width: calc(35% - 10px);*/
+    margin-bottom: 20px;
+    flex-basis: auto;
+    /*margin: 10px;*/
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.product h2{
+    margin: 0 auto;
+}
+.product p{
+    margin: 10px auto;
+}
+.product button{
+    display: block;
+    margin: 10px auto;
+}
+.product img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    /*max-width: 400px;*/
+    border-radius: 10px;
+}
+
+#product-list2 {
+    flex-wrap: wrap;
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#product-list2 h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+#product1-img{
+    transition: opacity 0.5s ease-in-out;
+}
+.contact{
+    text-align: center;
+}
+
+
+main {
+    margin: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: navajowhite;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+#link-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*backface-visibility: hidden;*/
+}
+#link-list div{
+    margin: 0 5px;
+}
+.logo image{
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+}
+.logo div{
+    margin: 0 10px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
