@@ -47,9 +47,9 @@ document.getElementById('product-list2').addEventListener('click', function(even
 });
 // Array of image URLs to cycle through
 const productImages = [
-    ["image/masjid1.jpg",
-    "image/masjidil-haram.jpg",
-    "image/masjid4.jpg"],
+    ["image/me-customer.jpg",
+    "image/balang.jpeg",
+    "image/balang2.jpeg"],
     ["image/masjid2.jpg",
     "image/hagia-sophia.jpg",
     "image/kaabah.jpg"],
@@ -59,26 +59,7 @@ const productImages = [
     ["image/masjid4.jpg",
     "image/brown-mosque.jpg",
     "image/masjid2.jpg"]];
-// const product1Images = [
-//     "image/masjid1.jpg",
-//     "image/masjidil-haram.jpg",
-//     "image/masjid4.jpg"
-// ];
-// const product2Images = [
-//     "image/masjid2.jpg",
-//     "image/hagia-sophia.jpg",
-//     "image/kaabah.jpg"
-// ];
-// const product3Images = [
-//     "image/masjid3.jpg",
-//     "image/grand-mosque.jpg",
-//     "image/masjid4.jpg"
-// ];
-// const product4Images = [
-//     "image/masjid4.jpg",
-//     "image/brown-mosque.jpg",
-//     "image/masjid2.jpg"
-// ];
+
 
 const productImgElement = [
     document.getElementById("product-img-1"),
@@ -94,12 +75,15 @@ setInterval(function() {
             currentProductImageIndex[i]=0;
         }
     productImgElement[i].style.opacity=0;
+        console.log(currentProductImageIndex[i]);
 
+        console.log(productImgElement);
     setTimeout(function() {
         productImgElement[i].src = productImages[i][currentProductImageIndex[i]];
         productImgElement[i].style.opacity=1;
+        console.log(currentProductImageIndex[i]);
 
-    }, 500);
+    }, 500*i);
     }
 }, 4000);
 
