@@ -72,7 +72,9 @@ let getIntervalID = setInterval(function() {
     for (let i = 0 ; i < productImgElement.length ; i++){
         currentProductImageIndex[i]++;
         if (currentProductImageIndex[i] >= productImages[i].length){
-            currentProductImageIndex[i]=0;
+            setTimeout(function(){
+                currentProductImageIndex[i]=0;
+            },500*(i+1));
         }
     productImgElement[i].style.opacity=0;
     setTimeout(function() {
