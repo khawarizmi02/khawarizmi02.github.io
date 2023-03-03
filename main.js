@@ -68,22 +68,20 @@ const productImgElement = [
     document.getElementById("product-img-4")];
 
 let currentProductImageIndex = [0,0,0,0];
-setInterval(function() {
+let getIntervalID = setInterval(function() {
     for (let i = 0 ; i < productImgElement.length ; i++){
         currentProductImageIndex[i]++;
         if (currentProductImageIndex[i] >= productImages[i].length){
             currentProductImageIndex[i]=0;
         }
     productImgElement[i].style.opacity=0;
-        console.log(currentProductImageIndex[i]);
-
-        console.log(productImgElement);
     setTimeout(function() {
         productImgElement[i].src = productImages[i][currentProductImageIndex[i]];
         productImgElement[i].style.opacity=1;
-        console.log(currentProductImageIndex[i]);
-
-    }, 500*i);
+    }, 500*(i+1));
     }
 }, 4000);
 
+productImgElement[i].addEventListener("mouseover", function() {
+    clearInterval(getIntervalID);
+});
