@@ -47,7 +47,7 @@ document.getElementById('product-list2').addEventListener('click', function(even
 });
 // Array of image URLs to cycle through
 const productImages = [
-    ["image/me-customer.jpg",
+    ["https://lh3.googleusercontent.com/p/AF1QipOEas2yeX3Pz5hL3FSFzol43cERoK7Jf0p2Z5vC=s680-w680-h510",
     "image/balang.jpeg",
     "image/balang2.jpeg"],
     ["image/masjid2.jpg",
@@ -83,7 +83,3 @@ let getIntervalID = setInterval(function() {
     }, 500*(i+1));
     }
 }, 4000);
-
-productImgElement[i].addEventListener("mouseover", function() {
-    clearInterval(getIntervalID);
-});

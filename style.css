@@ -14,16 +14,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 10px;
     background-color: navajowhite;
 }
 
 .logo img {
+    padding-right: 15px;
     height: 60px;
 }
 
 .company-name {
     display: flex;
+    font-family: 'Kalam',cursive;
+    font-size: 100px;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
